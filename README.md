@@ -2,20 +2,23 @@
 
 ## Ejercicio 1
 
-¿Qué pieza de React Router corresponde a router-outlet, a routerLink y a routerLinkActive?
-router-outlet = <Outlet />, routerLink = <Link>, routerLinkActive = <NavLink>.
+**¿Qué pieza de React Router corresponde a router-outlet, a routerLink y a routerLinkActive?**
 
-¿Por qué la ruta comodín (**) va al final y la ruta vacía necesita pathMatch: 'full'?
-Las rutas se revisan en orden y ** coincide con todo, así que si va antes tapa a las demás. La ruta vacía necesita pathMatch: 'full' porque si no coincidiría con cualquier URL.
+`<Outlet />`, `<Link>` y `<NavLink>`.
+
+**¿Por qué la ruta comodín (\*\*) va al final y la ruta vacía necesita pathMatch: 'full'?**
+
+Porque \*\* atrapa todo y taparía a las demás rutas. Y sin 'full', la ruta vacía coincidiría con cualquier URL.
 
 ## Ejercicio 2
 
-¿Dónde vive el valor de un campo en un formulario reactivo y en qué se diferencia del useState de React?
-Vive en el FormControl del componente. A diferencia de useState, no hay que actualizarlo a mano con onChange; se sincroniza solo con el input.
+**¿Dónde vive el valor de un campo en un formulario reactivo y en qué se diferencia del useState de React?**
 
-¿Qué regresa un validador propio cuando el valor es válido y cuando no, y cómo se relaciona con hasError?
-Regresa null si es válido y un objeto con el error si no, por ejemplo { multiploDe: true }. hasError('multiploDe') revisa si ese error existe.
+En el FormControl. No hay que actualizarlo a mano como con useState.
 
+**¿Qué regresa un validador propio cuando el valor es válido y cuando no, y cómo se relaciona con hasError?**
+
+Regresa null si es válido y un objeto con el error si no. hasError busca ese error.
 
 
 
